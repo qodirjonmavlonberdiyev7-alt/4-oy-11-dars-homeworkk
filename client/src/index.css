@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-image: url('../public/bacground\ image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ul, ol {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+table thead tr {
+  --bs-table-bg: rgb(112, 138, 184) !important;
+}
+
+table tbody tr:nth-child(even) {
+  --bs-table-bg: rgb(75, 174, 212) !important;
+}
