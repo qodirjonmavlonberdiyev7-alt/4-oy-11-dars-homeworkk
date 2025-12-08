@@ -1,14 +1,50 @@
 [
     {
-        "id": "ddac2a23-18ee-4099-a081-5ee4555fef72",
-        "User": "Behzod",
-        "Task": "fizika",
-        "Deadline": "22-dekabr"
+        "id": "597cd801-3189-498f-9c9f-6065358a5741",
+        "User": "Qodirjon",
+        "Task": "futbolga borish",
+        "Deadline": "2 soat"
     },
     {
-        "id": "2148b49d-03c8-49fe-9533-5aedde806872",
+        "id": "6608afc9-b611-4453-8fae-5ef850b80709",
         "User": "Qodirjon",
-        "Task": "Kino ko'rish",
-        "Deadline": "6-dekabr soat 19:00 gacha"
+        "Task": "parkga borish",
+        "Deadline": "3 soat"
+    },
+    {
+        "id": "f33949e1-470f-4dda-afd4-b53f5274534c",
+        "User": "Qodirjon",
+        "Task": "uyga vazifa tayyorlash dasturlashdan",
+        "Deadline": "3 soat"
+    },
+    {
+        "id": "3e5a56b0-143b-491e-8e6f-6e15cd179ec8",
+        "User": "Qodirjon",
+        "Task": "ingliz tilidan lug'at yodlash",
+        "Deadline": "3 soat"
+    },
+    {
+        "id": "bea4d4ca-a6ab-419d-ac6f-1a15f06734ad",
+        "User": "Qodirjon",
+        "Task": "Listening qilish",
+        "Deadline": "3 soat"
+    },
+    {
+        "id": "4a81881b-9dbb-4ed6-8b47-4a2071d019bf",
+        "User": "Qodirjon",
+        "Task": "Ingliz tilidan takrorlash qilish",
+        "Deadline": "3 soat"
+    },
+    {
+        "id": "b832e12d-0b4d-4687-bf6a-56cffdc9742a",
+        "User": "Qodirjon",
+        "Task": "Ingliz tilidan takrorlash qilish",
+        "Deadline": "3 soat"
+    },
+    {
+        "id": "b76a9f92-74f6-44d5-89f4-542a5a21ff47",
+        "User": "Qodirjon",
+        "Task": "dasturlashdan takrorlash qilish",
+        "Deadline": "11 soat"
     }
 ]
