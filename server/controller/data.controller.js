@@ -27,7 +27,7 @@ const add_data = async (req, res) => {
     write_file("todo.json", fileData);
 
     res.status(201).json({
-      message: `Added new task  ${User} dan`  ,
+      message: "Added new task",
     });
   } catch (error) {
     console.log(error.message);
