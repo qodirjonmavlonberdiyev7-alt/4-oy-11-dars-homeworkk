@@ -35,3 +35,8 @@ table thead tr {
 table tbody tr:nth-child(even) {
   --bs-table-bg: rgb(75, 174, 212) !important;
 }
+
+.progress {
+  width: 70px !important;
+  height: 70px !important;
+}

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import "./index.css";
-import { ToastContainer, toast } from "react-toastify";
+  import { ToastContainer, toast } from 'react-toastify';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 function App() {
   const [data, setData] = useState([]);
@@ -35,7 +37,7 @@ function App() {
     })
       .then((res) => res.json())
       .then((info) => {
-        toast(info.message);
+        toast.error(info.message);
         getData();
       })
       .catch((error) => console.log(error.message));
@@ -58,7 +60,7 @@ function App() {
       })
         .then((res) => res.json())
         .then((info) => {
-          toast(info.message);
+          toast.success(info.message);
           getData();
           reset();
         })
@@ -77,7 +79,7 @@ function App() {
       })
         .then((res) => res.json())
         .then((info) => {
-          toast(info.message);
+          toast.info(info.message);
           getData();
           reset();
         })
@@ -100,7 +102,7 @@ function App() {
   return (
     <div className="container">
       <ToastContainer
-        position="top-center"
+        position="top-left"
         autoClose={4000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -109,12 +111,12 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="light"
+        theme="light "
       />
 
       <h1 className="mt-5 mb-5">Todo task</h1>
 
-      <form className="mt-5 py-5" onSubmit={editId ? updateData : addData}>
+      <form className="mt-5 py-5" onSubmit={addData}>
         <input
           type="text"
           className="form-control mb-3"
@@ -160,30 +162,36 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {data.map((item, index) => (
-            <tr scope="row" key={index} className="tr">
-              <th>{index + 1}</th>
-              <td>User: {item.User}</td>
-              <td>Task: {item.Task}</td>
-              <td>Deadline: {item.Deadline}</td>
-              <td>
-                <button
-                  className="btn btn-warning"
-                  onClick={() => updateData(item)}
-                >
-                  edit
-                </button>
-              </td>
-              <td>
-                <button
-                  className="btn btn-danger"
-                  onClick={() => deleteData(item.id)}
-                >
-                  delete
-                </button>
-              </td>
-            </tr>
-          ))}
+          {data.length > 0 ? (
+            data.map((item, index) => (
+              <tr scope="row" key={index} className="tr">
+                <th>{index + 1}</th>
+                <td>User: {item.User}</td>
+                <td>Task: {item.Task}</td>
+                <td>Deadline: {item.Deadline}</td>
+                <td>
+                  <button
+                    className="btn btn-warning"
+                    onClick={() => updateData(item)}
+                  >
+                    edit
+                  </button>
+                </td>
+                <td>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => deleteData(item.id)}
+                  >
+                    delete
+                  </button>
+                </td>
+              </tr>
+            ))
+          ) : (
+            <Box sx={{ display: 'flex', justifyContent: "center", marginTop: "50px", marginLeft: "400px"}}>
+             <CircularProgress className="progress"/>
+            </Box>
+          )}
         </tbody>
       </table>
     </div>
